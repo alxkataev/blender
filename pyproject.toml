@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "blender"
+version = "0.1.0"
+description = "A tool for merging multiple lists of strings together"
+authors = ["Alex Kataev <alexander.kataev@wolt.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^7.4.0"
+pytest-benchmark = "^4.0.0"
+click = "^8.1.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+blend = 'src.api.cli:blend_two_lists_with_weights'
